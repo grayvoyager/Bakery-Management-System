@@ -10,7 +10,7 @@ public class TableReservationStatus {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long tableId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

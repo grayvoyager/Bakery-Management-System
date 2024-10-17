@@ -1,8 +1,10 @@
 package com.management.system.bakery.backend.DTO;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class ReservationRequestDTO {
     private Long reservationId;
     private UserDTO user; // User requesting the reservation

@@ -1,19 +1,20 @@
 package com.management.system.bakery.backend.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.security.Timestamp;
 
 @Data
 @Entity
+@NoArgsConstructor
 @Table(name = "reviews")
 public class Review {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reviewId;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)

@@ -2,11 +2,13 @@ package com.management.system.bakery.backend.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
 @Entity
+@NoArgsConstructor
 @Table(name = "food_categories")
 public class FoodCategory {
 

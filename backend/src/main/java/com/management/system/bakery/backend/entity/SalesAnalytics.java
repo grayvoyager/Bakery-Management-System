@@ -3,12 +3,14 @@ package com.management.system.bakery.backend.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.security.Timestamp;
 
 @Data
 @Entity
 @Table(name = "sales_analytics")
+@NoArgsConstructor
 public class SalesAnalytics {
 
     @Id

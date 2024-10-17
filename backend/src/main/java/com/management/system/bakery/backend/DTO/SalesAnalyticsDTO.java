@@ -2,8 +2,10 @@ package com.management.system.bakery.backend.DTO;
 
 import jdk.jfr.Timestamp;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class SalesAnalyticsDTO {
     private Long id;
     private Timestamp date;
