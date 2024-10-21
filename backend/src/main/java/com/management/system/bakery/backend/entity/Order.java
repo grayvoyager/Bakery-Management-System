@@ -3,6 +3,7 @@ package com.management.system.bakery.backend.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+//import org.hibernate.annotations.Tables;
 
 import java.security.Timestamp;
 
@@ -29,7 +30,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "table_id", nullable = false)
-    private TableReservationStatus table;
+    private DiningTables table;
 
     @Column(name = "order_amount", nullable = false)
     private Double orderAmount;

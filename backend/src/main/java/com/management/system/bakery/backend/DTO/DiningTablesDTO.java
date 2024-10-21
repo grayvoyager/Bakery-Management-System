@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class TableReservationStatusDTO {
+public class DiningTablesDTO {
     private Long tableId;
     private UserDTO user; // Currently assigned user
     private Integer tableCapacity;

@@ -20,4 +20,9 @@ public class FoodItem {
 
     @Column(name = "food_price", nullable = false)
     private Double foodPrice;
+
+    @Column(name="food_item_name", nullable=false)
+    private String name;
+
+
 }

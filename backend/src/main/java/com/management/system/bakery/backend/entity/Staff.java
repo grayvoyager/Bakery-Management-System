@@ -16,7 +16,7 @@ public class Staff {
     private Long id;
 
     @Column(name = "staff_name", nullable = false)
-    private String staffName;
+    private String name;
 
     @Column(name = "shift", nullable = false)
     private String shift;

@@ -17,7 +17,7 @@ public class FoodCategory {
     private Long id;
 
     @Column(name = "category_name", nullable = false)
-    private String categoryName;
+    private String name;
 
     @OneToMany(mappedBy = "foodCategory", cascade = CascadeType.ALL)
     private List<FoodItem> foodItems;

@@ -4,29 +4,35 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-    @Data
-    @Entity
-    @NoArgsConstructor
-    @Table(name = "users")
-    public class User {
+import java.util.List;
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private Long id;
+@Data
+@Entity
+@NoArgsConstructor
+@Table(name = "users")
+public class User {
 
-        @Column(name = "user_name", nullable = false)
-        private String userName;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-        @ManyToOne
-        @JoinColumn(name = "role_id", nullable = false)
-        private Role role;
+    @Column(name = "user_name", nullable = false)
+    private String name;
 
-        @Column(name = "user_password", nullable = false)
-        private String userPassword;
+    @ManyToMany
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private List<Role> roles;
 
-        @Column(name = "email", unique = true, nullable = false)
-        private String email;
+    @Column(name = "password", nullable = false)
+    private String password;
 
-        @Column(name = "phone_number")
-        private String phoneNumber;
-    }
+    @Column(name = "email", unique = true, nullable = false)
+    private String email;
+
+    @Column(name = "phone_number")
+    private String phoneNumber;
+}

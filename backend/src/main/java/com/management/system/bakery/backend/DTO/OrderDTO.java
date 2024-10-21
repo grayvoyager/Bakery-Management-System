@@ -1,5 +1,6 @@
 package com.management.system.bakery.backend.DTO;
 
+import com.management.system.bakery.backend.entity.DiningTables;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,7 +13,7 @@ public class OrderDTO {
     private FoodItemDTO foodItem;
     private Integer quantity;
     private UserDTO user;
-    private TableReservationStatusDTO table;
+    private DiningTables table;
     private Double orderAmount;
     private Timestamp createdAt;
 }

@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class ReservationRequestDTO {
-    private Long reservationId;
+//    private Long reservationId;
     private UserDTO user; // User requesting the reservation
     private Integer capacity;
     private String status; // e.g., Approved, Rejected, Pending

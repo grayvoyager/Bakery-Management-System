@@ -3,13 +3,14 @@ package com.management.system.bakery.backend.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Tables;
 
 import java.sql.Timestamp;
 
 @Data
 @Entity
 @NoArgsConstructor
-@Table(name = "bills")
+@jakarta.persistence.Table(name = "bills")
 public class Bill {
 
     @Id
@@ -24,9 +25,9 @@ public class Bill {
     @JoinColumn(name = "order_id", nullable = false)
     private Order order;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "table_id", nullable = false)
-    private TableReservationStatus table;
+    private DiningTables table;
 
     @Column(name = "bill_amount", nullable = false)
     private Double billAmount;

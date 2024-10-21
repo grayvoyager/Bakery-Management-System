@@ -5,6 +5,7 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+//@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 public class AdminUserDTO extends UserDTO {
